@@ -1,0 +1,1066 @@
+/* ==========================================================================
+   BROSEO — CARBON & VOLT CONTINUOUS SCROLL DESIGN SYSTEM
+   Approved Palette:
+   - Carbon:       #111315
+   - Graphite:     #292E32
+   - Muted Green:  #66736A
+   - Volt Lime:    #C7F169
+   - Soft Sage:    #E9EEE8
+   - Pure White:   #FFFFFF
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Play Jack';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: block;
+  src: url('../assets/fonts/PlayJack.ttf') format('truetype'),
+       url('../assets/fonts/play-jack.woff2') format('woff2'),
+       url('../assets/fonts/play-jack.woff') format('woff'),
+       url('../assets/fonts/PlayJack.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('../assets/fonts/cinzel-400-900-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('../assets/fonts/cinzel-400-900-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('../assets/fonts/sora-100-800-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('../assets/fonts/sora-100-800-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../assets/fonts/manrope-400-600-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../assets/fonts/inter-400-600-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/ibm-plex-mono-500-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Approved Carbon & Volt Palette */
+  --carbon: #111315;
+  --graphite: #292E32;
+  --muted-green: #66736A;
+  --volt-lime: #C7F169;
+  --soft-sage: #E9EEE8;
+  --pure-white: #FFFFFF;
+
+  /* Mapped Semantic Palette Tokens (100% compatibility across all components) */
+  --black-cherry: var(--carbon);
+  --deep-burgundy: var(--graphite);
+  --dusty-rose: var(--volt-lime);
+  --powder-blush: var(--soft-sage);
+  --warm-porcelain: var(--pure-white);
+  --muted-mauve: var(--muted-green);
+
+  /* Supporting Tonal Layers */
+  --cherry-elevated: #1A1E21;
+  --cherry-deep: #0B0D0E;
+  --porcelain-soft: #E9EEE8;
+  --burgundy-deep: #111315;
+
+  /* Dynamic Scroll-Interpolated Environment Variables (Updated @ 60fps by JS) */
+  --dynamic-bg: #111315;
+  --dynamic-text: #FFFFFF;
+  --dynamic-subtext: #E9EEE8;
+  --dynamic-muted: #E9EEE8;
+  --dynamic-accent: #C7F169;
+  --dynamic-border: rgba(233, 238, 232, 0.2);
+  --dynamic-surface: rgba(17, 19, 21, 0.22);
+  --dynamic-header-bg: rgba(17, 19, 21, 0.88);
+  --dynamic-glow-opacity: 1;
+
+  /* Static Hairlines for Panels */
+  --hairline-dark: rgba(233, 238, 232, 0.18);
+  --hairline-dark-strong: rgba(102, 115, 106, 0.48);
+  --hairline-light: rgba(17, 19, 21, 0.14);
+  --hairline-light-strong: rgba(41, 46, 50, 0.38);
+
+  /* Text Hierarchy Fallbacks */
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-secondary: #E9EEE8;
+  --text-on-dark-muted: #66736A;
+  --text-on-light: #111315;
+  --text-on-light-secondary: #292E32;
+  --text-on-light-muted: #66736A;
+
+  /* Typography Stack */
+  --font-play-jack: 'Play Jack', sans-serif;
+  --font-cinzel: 'Cinzel', 'Cormorant Garamond', 'Georgia', serif;
+  --font-sora: 'Sora', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Expressive Fluid Typography Scale (Calibrated from 360px to 1920px) */
+  --type-monument: clamp(2.25rem, 6.2vw + 0.5rem, 7rem);
+  --type-hero: clamp(2rem, 4.8vw + 0.5rem, 5.5rem);
+  --type-h1: clamp(1.85rem, 4.2vw + 0.4rem, 4.5rem);
+  --type-h2: clamp(1.5rem, 3vw + 0.35rem, 3.5rem);
+  --type-h3: clamp(1.25rem, 1.8vw + 0.25rem, 2.05rem);
+  --type-h4: clamp(1.0625rem, 1.1vw + 0.2rem, 1.375rem);
+  --type-lead: clamp(1.03125rem, 1vw + 0.25rem, 1.35rem);
+  --type-body: clamp(0.9375rem, 0.25vw + 0.85rem, 1rem);
+  --type-small: 0.875rem;
+  --type-mono: clamp(0.6875rem, 0.15vw + 0.65rem, 0.75rem);
+  --type-price: clamp(2.25rem, 4.5vw + 0.5rem, 4.75rem);
+
+  /* Layout & Spatial Rhythm */
+  --container-max: 1480px;
+  --gutter-outer: clamp(1rem, 4vw, 4.25rem);
+  --grid-gap: clamp(1rem, 2vw, 2rem);
+  --section-pad-y: clamp(3.75rem, 8vw, 9.5rem);
+  --section-pad-y-lg: clamp(4.25rem, 9.5vw, 11rem);
+  --header-height: 82px;
+
+  /* Motion Easing */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 240ms;
+  --duration-base: 520ms;
+  --duration-slow: 850ms;
+}
+
+/* ==========================================================================
+   1. RESET & CONTINUOUS SCROLL CANVAS
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent flex and grid children from blowing out narrow split-screen containers */
+* {
+  min-width: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--dynamic-bg, #111315) !important;
+  color: var(--dynamic-text, #FFFFFF);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+body,
+body.theme-cherry,
+body.has-scroll-canvas {
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  line-height: 1.65;
+  background-color: var(--dynamic-bg, #111315) !important;
+  color: var(--dynamic-text, #FFFFFF);
+  overflow-x: clip;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Fixed Ambient Stage Layer Behind All Homepage Content */
+.ambient-canvas-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--dynamic-bg, #111315);
+  pointer-events: none;
+  will-change: background-color;
+}
+
+.ambient-canvas-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at var(--cursor-x, 70%) var(--cursor-y, 25%), rgba(199, 241, 105, 0.08) 0%, transparent 52%),
+    radial-gradient(circle at 18% 82%, rgba(102, 115, 106, 0.14) 0%, transparent 55%);
+  opacity: var(--dynamic-glow-opacity, 1);
+  pointer-events: none;
+  transition: opacity 200ms linear;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth),
+              border-color var(--duration-fast) var(--ease-smooth),
+              background-color var(--duration-fast) var(--ease-smooth),
+              transform var(--duration-fast) var(--ease-smooth);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--volt-lime);
+  color: var(--carbon);
+}
+
+:focus-visible {
+  outline: 2px solid var(--volt-lime);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1.5rem;
+  z-index: 9999;
+  background-color: var(--volt-lime);
+  color: var(--carbon);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--carbon);
+  transition: top var(--duration-fast) var(--ease-smooth);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ==========================================================================
+   2. CONTINUOUS SCROLL SECTIONS (SEAMLESS BLENDING, NOT HARD BLOCKS)
+   ========================================================================== */
+body.has-scroll-canvas main > section,
+body.has-scroll-canvas .theme-cherry:not(body),
+body.has-scroll-canvas .theme-porcelain:not(body),
+body.has-scroll-canvas .theme-burgundy:not(body),
+body.has-scroll-canvas .theme-blush:not(body),
+body.has-scroll-canvas .theme-rose:not(body),
+body.has-scroll-canvas .hero-stage,
+body.has-scroll-canvas .service-hero-banner {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: var(--dynamic-text);
+  --surface-hairline: var(--dynamic-border);
+  --surface-hairline-strong: var(--dynamic-border);
+  --surface-secondary: var(--dynamic-subtext);
+  --surface-muted: var(--dynamic-muted);
+}
+
+.theme-cherry {
+  background-color: var(--black-cherry);
+  color: var(--warm-porcelain);
+  --surface-hairline: var(--hairline-dark);
+  --surface-hairline-strong: var(--hairline-dark-strong);
+  --surface-secondary: var(--powder-blush);
+  --surface-muted: var(--muted-mauve);
+}
+
+.theme-porcelain {
+  background-color: var(--warm-porcelain);
+  color: var(--black-cherry);
+  --surface-hairline: var(--hairline-light);
+  --surface-hairline-strong: var(--hairline-light-strong);
+  --surface-secondary: var(--text-on-light-secondary);
+  --surface-muted: var(--deep-burgundy);
+}
+
+.theme-burgundy {
+  background-color: var(--graphite);
+  color: var(--pure-white);
+  --surface-hairline: rgba(233, 238, 232, 0.22);
+  --surface-hairline-strong: var(--soft-sage);
+  --surface-secondary: var(--soft-sage);
+  --surface-muted: var(--soft-sage);
+}
+
+.theme-blush {
+  background-color: var(--soft-sage);
+  color: var(--carbon);
+  --surface-hairline: rgba(17, 19, 21, 0.15);
+  --surface-hairline-strong: var(--graphite);
+  --surface-secondary: var(--graphite);
+  --surface-muted: var(--muted-green);
+}
+
+.theme-rose {
+  background-color: var(--soft-sage);
+  color: var(--carbon);
+  --surface-hairline: rgba(17, 19, 21, 0.16);
+  --surface-hairline-strong: var(--carbon);
+  --surface-secondary: var(--graphite);
+  --surface-muted: var(--carbon);
+}
+
+/* ==========================================================================
+   3. ARCHITECTURAL GRID & CONTAINERS
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-outer);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1680px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 3rem);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-pad-y);
+  border-bottom: 1px solid var(--dynamic-border, rgba(233, 201, 199, 0.14));
+}
+
+.section-lg {
+  padding-block: var(--section-pad-y-lg);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+.col-span-9 { grid-column: span 9; }
+.col-span-10 { grid-column: span 10; }
+.col-span-12 { grid-column: span 12; }
+
+/* ==========================================================================
+   4. EXPRESSIVE TYPOGRAPHY HIERARCHY & DYNAMIC CONTRAST
+   ========================================================================== */
+.title-monument,
+.title-hero,
+.title-h1,
+.title-h2,
+.title-h3,
+.title-h4 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.title-monument {
+  font-family: var(--font-display);
+  font-size: var(--type-monument);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+.title-hero {
+  font-family: var(--font-display);
+  font-size: var(--type-hero);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+}
+
+.title-h1 {
+  font-family: var(--font-display);
+  font-size: var(--type-h1);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.032em;
+}
+
+.title-h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-h2);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.028em;
+}
+
+.title-h3 {
+  font-family: var(--font-display);
+  font-size: var(--type-h3);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.022em;
+}
+
+.title-h4 {
+  font-family: var(--font-display);
+  font-size: var(--type-h4);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+}
+
+.serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding-right: 0.06em;
+  color: var(--dynamic-accent);
+}
+
+.text-rose { color: var(--dusty-rose); }
+.text-blush { color: var(--dynamic-subtext); }
+.text-burgundy { color: var(--deep-burgundy); }
+.text-mauve { color: var(--dynamic-muted); }
+
+/* Keep explicit dark cards legible regardless of outer interpolated background */
+.work-case-info-col,
+.hero-editorial-panel,
+.service-visual-stage,
+.engagement-monolith,
+.contact-direct-card {
+  --dynamic-text: #FFFFFF;
+  --dynamic-subtext: #E9EEE8;
+  --dynamic-muted: #E9EEE8;
+  --dynamic-accent: #C7F169;
+}
+
+.lead-copy {
+  font-size: var(--type-lead);
+  line-height: 1.52;
+  letter-spacing: -0.01em;
+  max-width: 56ch;
+  color: var(--dynamic-subtext);
+}
+
+.body-copy {
+  font-size: var(--type-body);
+  line-height: 1.68;
+  max-width: 62ch;
+}
+
+.meta-label {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--dynamic-muted);
+}
+
+.meta-label::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--dynamic-accent);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. NAVIGATION BAR (INDEPENDENT OF HOMEPAGE BACKGROUND ANIMATION)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: rgba(17, 19, 21, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(233, 238, 232, 0.16);
+  color: var(--pure-white);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.site-header .brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--warm-porcelain);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.2vw, 1.1875rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dynamic-text);
+  white-space: nowrap;
+}
+
+.brand-mark-box {
+  width: 12px;
+  height: 12px;
+  background-color: var(--deep-burgundy);
+  border: 1px solid var(--dusty-rose);
+  display: inline-block;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              background-color var(--duration-fast) var(--ease-smooth);
+}
+
+.brand-wordmark:hover .brand-mark-box {
+  transform: rotate(45deg) scale(1.1);
+  background-color: var(--dusty-rose);
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2.35rem);
+}
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 1vw, 0.9375rem);
+  font-weight: 500;
+  color: var(--powder-blush);
+  padding-block: 0.5rem;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--dusty-rose);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--warm-porcelain);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn-contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--volt-lime);
+  color: var(--carbon);
+  border: 1px solid var(--volt-lime);
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  transition: background-color var(--duration-fast) var(--ease-smooth),
+              color var(--duration-fast) var(--ease-smooth),
+              border-color var(--duration-fast) var(--ease-smooth),
+              transform var(--duration-fast) var(--ease-smooth);
+}
+
+.btn-contact-cta:hover {
+  background-color: var(--pure-white);
+  color: var(--carbon);
+  border-color: var(--pure-white);
+}
+
+.btn-contact-cta .arrow {
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.btn-contact-cta:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Mobile Menu Trigger */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid rgba(102, 115, 106, 0.55);
+  color: var(--pure-white);
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.menu-bars {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 18px;
+}
+
+.menu-bars span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              opacity var(--duration-fast) var(--ease-smooth);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-bars span:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-bars span:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: var(--header-height) 0 0 0;
+  z-index: 990;
+  background-color: var(--black-cherry);
+  color: var(--warm-porcelain);
+  border-top: 1px solid var(--hairline-dark);
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--gutter-outer);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: opacity var(--duration-base) var(--ease-editorial),
+              transform var(--duration-base) var(--ease-editorial),
+              visibility var(--duration-base);
+  overflow-y: auto;
+}
+
+.mobile-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--hairline-dark);
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid var(--hairline-dark);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: clamp(0.9rem, 2.5vh, 1.15rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 4.5vw, 2.15rem);
+  font-weight: 500;
+  color: var(--warm-porcelain);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-active {
+  color: var(--dusty-rose);
+}
+
+.mobile-drawer-footer {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   6. BUTTONS & MAGNETIC EDITORIAL LINKS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 50px;
+  padding: 0.825rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1.35;
+  border: 1px solid transparent;
+  transition: background-color var(--duration-fast) var(--ease-smooth),
+              color var(--duration-fast) var(--ease-smooth),
+              border-color var(--duration-fast) var(--ease-smooth),
+              transform var(--duration-fast) var(--ease-smooth);
+  will-change: transform;
+}
+
+.btn .arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Primary CTA on dark surfaces: Volt Lime with Carbon text */
+.btn-primary-dark {
+  background-color: var(--volt-lime);
+  color: var(--carbon);
+  border-color: var(--volt-lime);
+}
+
+.btn-primary-dark:hover {
+  background-color: var(--pure-white);
+  color: var(--carbon);
+  border-color: var(--pure-white);
+}
+
+/* Secondary CTA on dark surfaces: outlined Graphite / Muted Green */
+.btn-outline-dark {
+  background-color: rgba(17, 19, 21, 0.4);
+  color: var(--pure-white);
+  border-color: var(--muted-green);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--graphite);
+  color: var(--volt-lime);
+  border-color: var(--volt-lime);
+}
+
+/* Primary CTA on light surfaces: Carbon with Pure White text */
+.btn-primary-light {
+  background-color: var(--carbon);
+  color: var(--pure-white);
+  border-color: var(--carbon);
+}
+
+.btn-primary-light:hover {
+  background-color: var(--graphite);
+  border-color: var(--graphite);
+  color: var(--volt-lime);
+}
+
+/* Secondary CTA on light surfaces: outlined Graphite / Muted Green */
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--carbon);
+  border-color: var(--graphite);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--soft-sage);
+  color: var(--carbon);
+  border-color: var(--carbon);
+}
+
+.btn-porcelain {
+  background-color: var(--volt-lime);
+  color: var(--carbon);
+  border-color: var(--volt-lime);
+}
+
+.btn-porcelain:hover {
+  background-color: var(--pure-white);
+  color: var(--carbon);
+  border-color: var(--pure-white);
+}
+
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid currentColor;
+  line-height: 1.4;
+}
+
+.editorial-link .arrow {
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.editorial-link:hover {
+  color: var(--dynamic-accent);
+  border-bottom-color: var(--dynamic-accent);
+}
+
+.editorial-link:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* ==========================================================================
+   7. MONUMENTAL ARCHITECTURAL FOOTER (ADAPTS TO CONTINUOUS SCROLL CANVAS)
+   ========================================================================== */
+.site-footer {
+  background-color: transparent;
+  color: var(--dynamic-text);
+  border-top: 1px solid var(--dynamic-border);
+  padding-top: clamp(3.5rem, 7vw, 7rem);
+  padding-bottom: 2.25rem;
+  position: relative;
+  z-index: 3;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1.2fr;
+  gap: clamp(1.75rem, 3.5vw, 3.75rem);
+  padding-bottom: clamp(2.75rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--dynamic-border);
+}
+
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dynamic-muted);
+  margin-bottom: 1.1rem;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-nav-list a {
+  color: var(--dynamic-subtext);
+  font-size: 0.9375rem;
+  overflow-wrap: break-word;
+}
+
+.footer-nav-list a:hover {
+  color: var(--dynamic-accent);
+  transform: translateX(4px);
+  display: inline-block;
+}
+
+.footer-monument {
+  padding-block: clamp(1.75rem, 4vw, 3.75rem);
+  border-bottom: 1px solid var(--dynamic-border);
+  overflow: hidden;
+}
+
+.footer-monument-word {
+  font-family: var(--font-display);
+  font-size: clamp(2.65rem, 13.5vw, 13rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: var(--dynamic-text);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.footer-monument-dot {
+  color: var(--dynamic-accent);
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  padding-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  color: var(--dynamic-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   8. CONTINUOUS RESPONSIVE BREAKPOINTS (LAPTOP, SPLIT-SCREEN, TABLET, MOBILE)
+   ========================================================================== */
+
+/* Compact Desktop / Split-Screen Threshold (<= 1120px) */
+@media (max-width: 1120px) {
+  .footer-top-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Side-by-Side Window / Small Laptop / Tablet Landscape (<= 980px) */
+@media (max-width: 980px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  .primary-nav,
+  .header-actions .btn-contact-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .col-span-3,
+  .col-span-4,
+  .col-span-5,
+  .col-span-6,
+  .col-span-7,
+  .col-span-8,
+  .col-span-9,
+  .col-span-10 {
+    grid-column: span 12;
+  }
+}
+
+/* Narrow Split-Screen / Large Mobile (<= 640px) */
+@media (max-width: 640px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

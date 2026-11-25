@@ -1,0 +1,164 @@
+/* ==========================================================================
+   BROSEO — CHOREOGRAPHED SEO REVEALS, FLOATING DEPTH & SCROLL TRANSITIONS
+   ========================================================================== */
+
+/* Choreographed Entry for the Giant SEO Sculpture */
+@keyframes seo-letter-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 72px, -90px) rotateX(28deg) scale(0.88);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1);
+  }
+}
+
+/* Subtle Independent Floating Movement for S, E, O */
+@keyframes seo-float-s {
+  0%, 100% { transform: translate3d(0, 0px, 0) rotateZ(-0.6deg); }
+  50% { transform: translate3d(0, -13px, 12px) rotateZ(0.8deg); }
+}
+
+@keyframes seo-float-e {
+  0%, 100% { transform: translate3d(0, -6px, 8px) rotateZ(0.5deg); }
+  50% { transform: translate3d(0, 11px, -6px) rotateZ(-0.7deg); }
+}
+
+@keyframes seo-float-o {
+  0%, 100% { transform: translate3d(0, 4px, 0) rotateZ(0.7deg); }
+  50% { transform: translate3d(0, -15px, 14px) rotateZ(-0.6deg); }
+}
+
+.seo-letter-node:nth-child(1) {
+  animation: seo-letter-enter 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.08s backwards;
+}
+
+.seo-letter-node:nth-child(2) {
+  animation: seo-letter-enter 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+}
+
+.seo-letter-node:nth-child(3) {
+  animation: seo-letter-enter 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.32s backwards;
+}
+
+.seo-letter-float-s {
+  animation: seo-float-s 6.4s ease-in-out infinite;
+}
+
+.seo-letter-float-e {
+  animation: seo-float-e 7.2s ease-in-out infinite;
+}
+
+.seo-letter-float-o {
+  animation: seo-float-o 6.8s ease-in-out infinite;
+}
+
+/* Continuous Slow Orbital Rotation for Saturn Ring Tracks */
+@keyframes saturn-orbit-cw {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+@keyframes saturn-orbit-ccw {
+  0% { transform: rotateZ(360deg); }
+  100% { transform: rotateZ(0deg); }
+}
+
+.saturn-spin-slow {
+  animation: saturn-orbit-cw 38s linear infinite;
+}
+
+.saturn-spin-reverse {
+  animation: saturn-orbit-ccw 48s linear infinite;
+}
+
+.saturn-spin-medium {
+  animation: saturn-orbit-cw 28s linear infinite;
+}
+
+.saturn-spin-outer {
+  animation: saturn-orbit-ccw 64s linear infinite;
+}
+
+/* Continuous Porcelain Light Sweep Across BROSEO BUSINESS STUDIO Title
+   0% - 40% (~2.8s): Soft light reflection sweeps from left edge beyond right edge
+   40% - 100% (~4.2s): Rest interval before repeating seamlessly */
+@keyframes studio-title-light-sweep {
+  0% {
+    background-position: 135% 50%;
+  }
+  40%,
+  100% {
+    background-position: -35% 50%;
+  }
+}
+
+/* Scroll-Triggered Reveals */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition: opacity 820ms var(--ease-editorial),
+              transform 820ms var(--ease-editorial);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.965);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Stagger Delays */
+[data-delay="1"] { transition-delay: 90ms; }
+[data-delay="2"] { transition-delay: 180ms; }
+[data-delay="3"] { transition-delay: 270ms; }
+[data-delay="4"] { transition-delay: 360ms; }
+
+@keyframes pulse-rose {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.88);
+  }
+}
+
+.status-dot-live {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--dusty-rose);
+  animation: pulse-rose 2.6s infinite ease-in-out;
+}
+
+/* Strict Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
