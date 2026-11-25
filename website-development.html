@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Development &amp; Maintenance — BROSEO</title>
+  <meta name="description" content="Website design, development, improvements and ongoing maintenance by BROSEO. Custom business websites with ongoing maintenance included within the agreed monthly scope.">
+  <meta name="theme-color" content="#111315">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preload" href="assets/fonts/manrope-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="theme-cherry">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ARCHITECTURAL HEADER (EXACT 6 LINKS + CONTACT CTA) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-wordmark" aria-label="BROSEO — Home">
+        <span class="brand-mark-box" aria-hidden="true"></span>
+        <span>BROSEO</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link is-active">Services</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="engagement.html" class="nav-link">Engagement</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-contact-cta">
+          <span>Contact</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          aria-label="Toggle navigation menu"
+        >
+          <span>Menu</span>
+          <span class="menu-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><span>Home</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link"><span>About</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link is-active"><span>Services</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="work.html" class="mobile-nav-link"><span>Work</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="process.html" class="mobile-nav-link"><span>Process</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="engagement.html" class="mobile-nav-link"><span>Engagement</span><span>&rarr;</span></a></li>
+      </ul>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="contact.html" class="btn btn-primary-dark">
+        <span>Contact Us</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- SERVICE HERO -->
+    <section class="service-hero-banner" data-scroll-color="black-cherry" aria-labelledby="service-title">
+      <div class="container">
+        <div style="margin-bottom: 1.5rem;" data-reveal="fade">
+          <a href="services.html" class="editorial-link" style="color: var(--powder-blush);">
+            <span>&larr; All Services</span>
+          </a>
+        </div>
+        <div class="grid-12" style="align-items: end;">
+          <div class="col-span-8" data-reveal>
+            <span class="meta-label">Dedicated Service Scope</span>
+            <h1 id="service-title" class="title-hero" style="margin-top: 1rem;">
+              Website Development &amp; <span class="serif-accent text-blush">Maintenance</span>
+            </h1>
+          </div>
+          <div class="col-span-4" data-reveal data-delay="1">
+            <p class="body-copy text-blush">
+              Website design, development, improvements and ongoing maintenance. Website setup is quoted separately as a one-time charge; ongoing maintenance is included within your agreed monthly scope.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOPE & DELIVERABLES MATRIX (WARM PORCELAIN) -->
+    <section class="section section-lg theme-porcelain" data-scroll-color="warm-porcelain" aria-labelledby="deliverables-heading">
+      <div class="container">
+        <div style="margin-bottom: clamp(3rem, 5vw, 4.5rem);" data-reveal>
+          <span class="meta-label">Scope &amp; Deliverables</span>
+          <h2 id="deliverables-heading" class="title-h1" style="margin-top: 0.75rem;">
+            What is covered in <span class="serif-accent text-burgundy">setup</span> and ongoing maintenance.
+          </h2>
+        </div>
+
+        <div class="deliverables-matrix" data-reveal>
+          <article class="deliverable-cell">
+            <span class="meta-label">Website Design &amp; Architecture</span>
+            <h3 class="title-h3">Custom Interface &amp; Content Structure</h3>
+            <p style="color: var(--dynamic-subtext);">
+              We plan your page hierarchy, navigation flow, and visual layout around your actual products, services, and inquiry goals.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Responsive desktop, tablet, and mobile layouts</li>
+              <li>Clear typography and visual presentation of real business photography</li>
+              <li>Structured service pages, product catalogues, and project showcases</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Development &amp; Deployment</span>
+            <h3 class="title-h3">Clean Frontend &amp; CMS Implementation</h3>
+            <p style="color: var(--dynamic-subtext);">
+              Whether built as fast static HTML/CSS/JS or on a customizable WordPress foundation, we focus on clean code and reliable operation.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Enquiry form configuration, quote request workflows, and WhatsApp/call actions</li>
+              <li>Semantic HTML structure and clean URL architecture ready for search indexing</li>
+              <li>Security hardening, SSL verification, and core asset optimization</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Website Improvements</span>
+            <h3 class="title-h3">Iterative Page &amp; Section Upgrades</h3>
+            <p style="color: var(--dynamic-subtext);">
+              As your business adds new machinery, product lines, or service categories, we expand and refine your existing website.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Addition of new service descriptions, case galleries, or catalogue items</li>
+              <li>Refinement of landing layouts and inquiry forms</li>
+              <li>Mobile usability and page-speed improvements</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Ongoing Maintenance</span>
+            <h3 class="title-h3">Scheduled Monthly Care &amp; Upkeep</h3>
+            <p style="color: var(--dynamic-subtext);">
+              Included within the agreed ongoing monthly scope so your website does not fall out of date after launch.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Routine content, text, and photograph updates within agreed monthly volume</li>
+              <li>Core software/plugin updates and security checks</li>
+              <li>Form testing, broken link checks, and uptime monitoring</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL DEPLOYED WEBSITE EXAMPLES (BLACK CHERRY) -->
+    <section class="section section-lg theme-cherry" data-scroll-color="deep-burgundy" aria-labelledby="web-examples-heading">
+      <div class="container">
+        <div class="grid-12" style="margin-bottom: clamp(3rem, 5vw, 4.5rem); align-items: end;">
+          <div class="col-span-8" data-reveal>
+            <span class="meta-label">Real Deployed Examples</span>
+            <h2 id="web-examples-heading" class="title-h1" style="margin-top: 0.75rem;">
+              Websites built by <span class="serif-accent text-blush">BROSEO</span>.
+            </h2>
+          </div>
+          <div class="col-span-4" data-reveal data-delay="1">
+            <a href="work.html" class="editorial-link">
+              <span>View All Case Files</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="work-exhibition-list">
+          <article class="work-case-spread" data-reveal>
+            <div class="work-case-media-col">
+              <div class="work-browser-frame">
+                <div class="work-browser-bar">
+                  <div class="frame-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <span>karur-interiors-website</span>
+                  <span>Deployed June 2026</span>
+                </div>
+                <div class="work-browser-viewport">
+                  <img src="assets/images/work/karur-interiors.webp" alt="Karur Interiors website screenshot" loading="lazy" width="1280" height="760">
+                </div>
+              </div>
+            </div>
+            <div class="work-case-info-col" style="background-color: var(--cherry-elevated);">
+              <span class="meta-label" style="color: var(--powder-blush);">Interior Design Website</span>
+              <h3 class="title-h2">Karur Interiors</h3>
+              <p class="text-blush">
+                Responsive website build featuring service catalogues, project galleries, enquiry forms, local SEO, and security hardening.
+              </p>
+              <a href="work.html#karur-interiors" class="editorial-link">
+                <span>Read Case Summary</span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-case-spread is-reversed" data-reveal>
+            <div class="work-case-media-col">
+              <div class="work-browser-frame">
+                <div class="work-browser-bar">
+                  <div class="frame-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <span>dhanalaxmi-doors-website</span>
+                  <span>Deployed July 2026</span>
+                </div>
+                <div class="work-browser-viewport">
+                  <img src="assets/images/work/dhanalaxmi-doors.webp" alt="Shree Dhanalaxmi Doors Industries website screenshot" loading="lazy" width="1280" height="760">
+                </div>
+              </div>
+            </div>
+            <div class="work-case-info-col" style="background-color: var(--cherry-elevated);">
+              <span class="meta-label" style="color: var(--powder-blush);">Manufacturing Website</span>
+              <h3 class="title-h2">Shree Dhanalaxmi Doors Industries</h3>
+              <p class="text-blush">
+                Manufacturing UI/UX, product showcase, order quote forms, and core search setup for a wooden door manufacturer in Karur.
+              </p>
+              <a href="work.html#dhanalaxmi-doors" class="editorial-link">
+                <span>Read Case Summary</span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER SERVICES & CTA (DEEP BURGUNDY) -->
+    <section class="section theme-burgundy" data-scroll-color="black-cherry" aria-labelledby="other-services-heading">
+      <div class="container">
+        <div class="grid-12" style="align-items: center;">
+          <div class="col-span-7" data-reveal>
+            <span class="meta-label">Related Services &amp; Pricing</span>
+            <h2 id="other-services-heading" class="title-h2" style="margin-top: 0.75rem;">
+              Combine Website Maintenance with SEO, Google Business Profile, or Instagram Management.
+            </h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem;">
+              <a href="seo.html" class="editorial-link"><span>SEO, AI SEO &amp; GEO &rarr;</span></a>
+              <a href="google-business-profile.html" class="editorial-link"><span>Google Business Profile &rarr;</span></a>
+              <a href="instagram-management.html" class="editorial-link"><span>Instagram Management &rarr;</span></a>
+            </div>
+          </div>
+          <div class="col-span-5" data-reveal data-delay="1" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <a href="contact.html" class="btn btn-primary-light">
+              <span>Request Website Quote</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="engagement.html" class="btn btn-outline-light">
+              <span>Engagement Terms</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-wordmark">
+            <span class="brand-mark-box" aria-hidden="true"></span>
+            <span>BROSEO</span>
+          </a>
+          <p class="text-blush" style="margin-top: 1.25rem; font-size: 0.9375rem; max-width: 36ch;">
+            Website development and maintenance, SEO, AI SEO and GEO, Google Business Profile management, and Instagram management.
+          </p>
+          <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--dynamic-muted);">
+            <a href="mailto:support@monarchremote.in">support@monarchremote.in</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Navigation</h2>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="engagement.html">Engagement</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Core Services</h2>
+          <ul class="footer-nav-list">
+            <li><a href="website-development.html">Website Development &amp; Maintenance</a></li>
+            <li><a href="seo.html">SEO, AI SEO &amp; GEO</a></li>
+            <li><a href="google-business-profile.html">Google Business Profile Management</a></li>
+            <li><a href="instagram-management.html">Instagram Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Commercial Terms</h2>
+          <p class="text-blush" style="font-size: 0.9375rem;">
+            Starting at <strong>₹6,000/month</strong>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--dynamic-muted); margin-top: 0.5rem;">
+            Website setup quoted separately as a one-time charge. Minimum commitment: 3 months.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <a href="engagement.html" class="editorial-link">
+              <span>Engagement Details</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-monument" aria-hidden="true">
+        <div class="footer-monument-word">
+          <span>BROSEO</span>
+          <span class="footer-monument-dot">&bull;</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BROSEO. All rights reserved.</span>
+        <span>Cherry Noir Edition &middot; HTML5 / CSS3 / Vanilla JS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Management — BROSEO</title>
+  <meta name="description" content="Instagram content planning, design and ongoing account management by BROSEO.">
+  <meta name="theme-color" content="#111315">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preload" href="assets/fonts/manrope-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="theme-cherry">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ARCHITECTURAL HEADER (EXACT 6 LINKS + CONTACT CTA) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-wordmark" aria-label="BROSEO — Home">
+        <span class="brand-mark-box" aria-hidden="true"></span>
+        <span>BROSEO</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link is-active">Services</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="engagement.html" class="nav-link">Engagement</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-contact-cta">
+          <span>Contact</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          aria-label="Toggle navigation menu"
+        >
+          <span>Menu</span>
+          <span class="menu-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link"><span>Home</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link"><span>About</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link is-active"><span>Services</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="work.html" class="mobile-nav-link"><span>Work</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="process.html" class="mobile-nav-link"><span>Process</span><span>&rarr;</span></a></li>
+        <li class="mobile-nav-item"><a href="engagement.html" class="mobile-nav-link"><span>Engagement</span><span>&rarr;</span></a></li>
+      </ul>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="contact.html" class="btn btn-primary-dark">
+        <span>Contact Us</span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- SERVICE HERO -->
+    <section class="service-hero-banner" data-scroll-color="black-cherry" aria-labelledby="ig-service-title">
+      <div class="container">
+        <div style="margin-bottom: 1.5rem;" data-reveal="fade">
+          <a href="services.html" class="editorial-link" style="color: var(--powder-blush);">
+            <span>&larr; All Services</span>
+          </a>
+        </div>
+        <div class="grid-12" style="align-items: end;">
+          <div class="col-span-8" data-reveal>
+            <span class="meta-label">Dedicated Service Scope</span>
+            <h1 id="ig-service-title" class="title-hero" style="margin-top: 1rem;">
+              Instagram <span class="serif-accent text-blush">Management</span>
+            </h1>
+          </div>
+          <div class="col-span-4" data-reveal data-delay="1">
+            <p class="body-copy text-blush">
+              Content planning, design and ongoing account management. Presenting your actual services, projects, and products with visual consistency and a reliable publishing schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOPE & DELIVERABLES MATRIX (WARM PORCELAIN) -->
+    <section class="section section-lg theme-porcelain" data-scroll-color="warm-porcelain" aria-labelledby="ig-deliverables-heading">
+      <div class="container">
+        <div style="margin-bottom: clamp(3rem, 5vw, 4.5rem);" data-reveal>
+          <span class="meta-label">Scope &amp; Deliverables</span>
+          <h2 id="ig-deliverables-heading" class="title-h1" style="margin-top: 0.75rem;">
+            What is included in our <span class="serif-accent text-burgundy">monthly</span> Instagram execution.
+          </h2>
+        </div>
+
+        <div class="deliverables-matrix" data-reveal>
+          <article class="deliverable-cell">
+            <span class="meta-label">Content Planning</span>
+            <h3 class="title-h3">Structured Monthly Content Calendar</h3>
+            <p style="color: var(--dynamic-subtext);">
+              Each month begins with a clear plan of topics based on your actual business services, completed projects, product specifications, and customer questions.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Monthly topic planning aligned with your business priorities</li>
+              <li>Integration of real project photographs and work-in-progress updates supplied by your team</li>
+              <li>Clear review and approval workflow before posts are scheduled</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Visual Design</span>
+            <h3 class="title-h3">Editorial Post &amp; Carousel Design</h3>
+            <p style="color: var(--dynamic-subtext);">
+              We design clean, legible graphics and photo layouts that match your brand and website identity rather than generic social templates.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Custom static post graphics and multi-slide informational carousels</li>
+              <li>Consistent typography, colour discipline, and photo framing</li>
+              <li>Story highlight covers and profile grid organization</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Copywriting &amp; Profile Structure</span>
+            <h3 class="title-h3">Clear Captions &amp; Bio Optimization</h3>
+            <p style="color: var(--dynamic-subtext);">
+              Every post is paired with factual, informative captions that explain what your business offers and how prospective clients can inquire.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Concise, informative captions without filler slogans</li>
+              <li>Profile bio, contact buttons, and website link alignment</li>
+              <li>Relevant location tags and service category descriptors</li>
+            </ul>
+          </article>
+
+          <article class="deliverable-cell">
+            <span class="meta-label">Ongoing Account Management</span>
+            <h3 class="title-h3">Scheduled Publishing &amp; Monthly Review</h3>
+            <p style="color: var(--dynamic-subtext);">
+              We handle the recurring publishing cadence within your agreed monthly scope so your account remains active without taking your team away from operations.
+            </p>
+            <ul class="deliverable-bullet-list">
+              <li>Consistent publishing according to the agreed monthly post count</li>
+              <li>Profile hygiene and pinned post organization</li>
+              <li>Monthly summary of published content during Ongoing Review</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER SERVICES & CTA (DEEP BURGUNDY) -->
+    <section class="section theme-burgundy" data-scroll-color="black-cherry" aria-labelledby="ig-related-heading">
+      <div class="container">
+        <div class="grid-12" style="align-items: center;">
+          <div class="col-span-7" data-reveal>
+            <span class="meta-label">Connected Disciplines</span>
+            <h2 id="ig-related-heading" class="title-h2" style="margin-top: 0.75rem;">
+              Align your Instagram presence with your Website, Search Visibility, and Google Business Profile.
+            </h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem;">
+              <a href="website-development.html" class="editorial-link"><span>Website Development &amp; Maintenance &rarr;</span></a>
+              <a href="seo.html" class="editorial-link"><span>SEO, AI SEO &amp; GEO &rarr;</span></a>
+              <a href="google-business-profile.html" class="editorial-link"><span>Google Business Profile &rarr;</span></a>
+            </div>
+          </div>
+          <div class="col-span-5" data-reveal data-delay="1" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <a href="contact.html" class="btn btn-primary-light">
+              <span>Discuss Instagram Scope</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="engagement.html" class="btn btn-outline-light">
+              <span>Engagement Terms</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="index.html" class="brand-wordmark">
+            <span class="brand-mark-box" aria-hidden="true"></span>
+            <span>BROSEO</span>
+          </a>
+          <p class="text-blush" style="margin-top: 1.25rem; font-size: 0.9375rem; max-width: 36ch;">
+            Website development and maintenance, SEO, AI SEO and GEO, Google Business Profile management, and Instagram management.
+          </p>
+          <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--dynamic-muted);">
+            <a href="mailto:support@monarchremote.in">support@monarchremote.in</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Navigation</h2>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="engagement.html">Engagement</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Core Services</h2>
+          <ul class="footer-nav-list">
+            <li><a href="website-development.html">Website Development &amp; Maintenance</a></li>
+            <li><a href="seo.html">SEO, AI SEO &amp; GEO</a></li>
+            <li><a href="google-business-profile.html">Google Business Profile Management</a></li>
+            <li><a href="instagram-management.html">Instagram Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-col-title">Commercial Terms</h2>
+          <p class="text-blush" style="font-size: 0.9375rem;">
+            Starting at <strong>₹6,000/month</strong>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--dynamic-muted); margin-top: 0.5rem;">
+            Website setup quoted separately as a one-time charge. Minimum commitment: 3 months.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <a href="engagement.html" class="editorial-link">
+              <span>Engagement Details</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-monument" aria-hidden="true">
+        <div class="footer-monument-word">
+          <span>BROSEO</span>
+          <span class="footer-monument-dot">&bull;</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BROSEO. All rights reserved.</span>
+        <span>Cherry Noir Edition &middot; HTML5 / CSS3 / Vanilla JS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
